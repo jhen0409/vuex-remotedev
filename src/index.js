@@ -33,7 +33,7 @@ export default function remotedevPlugin(store, options) {
         case 'IMPORT_STATE':
           const { nextLiftedState } = message.payload
           const { computedStates } = nextLiftedState
-          store.replaceState(remotedev.extractState(message))
+          store.replaceState(computedStates[computedStates.length - 1].state)
           return devTools.send(null, nextLiftedState)
       }
     }),
