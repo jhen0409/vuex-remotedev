@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`works without crashing 1`] = `
+Object {
+  "count": 1,
+}
+`;
+
+exports[`works without crashing 2`] = `
+Array [
+  Array [
+    [Function],
+  ],
+]
+`;
+
+exports[`works without crashing 3`] = `
+Array [
+  Array [
+    Object {
+      "count": 2,
+    },
+  ],
+]
+`;
+
+exports[`works without crashing 4`] = `
+Array [
+  Array [
+    Object {
+      "payload": Object {
+        "a": 1,
+      },
+      "type": "increment",
+    },
+    Object {
+      "count": 2,
+    },
+  ],
+]
+`;

@@ -1,0 +1,35 @@
+{
+  "name": "vuex-remotedev",
+  "version": "0.0.1",
+  "description": "Inspecting vuex on Redux DevTools Extension / React Native Debugger",
+  "main": "lib/index.js",
+  "repository": "git@github.com:jhen0409/vuex-remotedev.git",
+  "author": "Jhen <developer@jhen.me>",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vuex",
+    "vue-native",
+    "redux-devtools",
+    "redux-devtools-extension",
+    "remotedev",
+    "react-native",
+    "react-native-debugger"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "babel src/ --out-dir lib/ --ignore __tests__",
+    "prepublish": "yarn test && yarn build"
+  },
+  "dependencies": {
+    "remotedev": "^0.2.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.1.0",
+    "vue": "^2.5.16",
+    "vuex": "^3.0.1"
+  }
+}
