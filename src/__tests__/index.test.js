@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import plugin from 'vuex-remotedev'
+import plugin from '..'
 
 Vue.use(Vuex)
 
