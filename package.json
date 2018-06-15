@@ -1,6 +1,6 @@
 {
   "name": "vuex-remotedev",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Inspecting vuex on Redux DevTools Extension / React Native Debugger",
   "main": "lib/index.js",
   "repository": "git@github.com:jhen0409/vuex-remotedev.git",
