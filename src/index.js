@@ -1,8 +1,11 @@
 import remotedev from 'remotedev'
+import cloneDeep from 'lodash.clonedeep'
 
 export default function remotedevPlugin(store, options) {
   const devTools = remotedev.connectViaExtension(options)
-  devTools.init(store.state)
+  const initialState = cloneDeep(store.state)
+
+  devTools.init(initialState)
 
   store.subscribe((mutation, state) => {
     devTools.send(
@@ -20,8 +23,10 @@ export default function remotedevPlugin(store, options) {
       if (message.type !== 'DISPATCH') return
       switch (message.payload.type) {
         case 'COMMIT':
-        case 'RESET':
           return devTools.init(store.state)
+        case 'RESET':
+          store.replaceState(initialState)
+          return devTools.init(initialState)
         case 'TOGGLE_ACTION':
           // TODO: Implement TOGGLE_ACTION
           return

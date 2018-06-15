@@ -36,8 +36,8 @@ test('works without crashing', () => {
   plugin(store)
   expect(store.state).toMatchSnapshot()
   expect(subscribe.mock.calls).toMatchSnapshot()
+  expect(init.mock.calls).toMatchSnapshot()
 
   store.dispatch('increment', { a: 1 })
-  expect(init.mock.calls).toMatchSnapshot()
   expect(send.mock.calls).toMatchSnapshot()
 })
