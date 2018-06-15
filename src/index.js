@@ -31,7 +31,9 @@ export default function remotedevPlugin(store, options) {
           // TODO: Implement TOGGLE_ACTION
           return
         case 'ROLLBACK':
-          return devTools.init(remotedev.extractState(message))
+          const state = remotedev.extractState(message)
+          store.replaceState(state)
+          return devTools.init(state)
         case 'JUMP_TO_STATE':
         case 'JUMP_TO_ACTION':
           return store.replaceState(remotedev.extractState(message))
