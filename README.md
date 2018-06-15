@@ -8,15 +8,26 @@ Due to I'm interesting for [`Vue Native`](https://github.com/GeekyAnts/vue-nativ
 
 <img width="1360" alt="vuex-and-rn" src="https://user-images.githubusercontent.com/3001525/41462483-9844892e-70c5-11e8-8f4a-9d3cd8abc205.png">
 
-> The todo app is based on [`ankitsinghania94/vue-native-todo-app`](https://github.com/ankitsinghania94/vue-native-todo-app)
+> The [todo app](example) example is based on [`ankitsinghania94/vue-native-todo-app`](https://github.com/ankitsinghania94/vue-native-todo-app)
+
+## Installation
+
+```bash
+$ yarn add vuex-remotedev
+```
 
 ## Usage
 
 ```js
-import remotedev from 'vuex-remotedev'
+import remotedevPlugin from 'vuex-remotedev'
 
-remotedev(store)
+remotedevPlugin(store, options)
 ```
+
+#### remotedevPlugin(store, options)
+
+- `store` - A Vuex store
+- `options` - Exposed options used for [connect API](https://github.com/zalmoxisus/redux-devtools-extension/blob/master/docs/API/Arguments.md#options) of redux-devtools-extension.
 
 ## Development
 
@@ -25,3 +36,7 @@ $ yarn
 $ yarn test
 $ yarn build
 ```
+
+## License
+
+[MIT](LICENSE.md)
